@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClimaTempoSarah.MainPage"
              Shell.NavBarIsVisible="false">
+
 <Grid ColumnSpacing="10"
       RowSpacing="10">
 
@@ -20,7 +21,7 @@
           <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions>
 
-<Image Source="diachuvosodenoite.jpg"
+<Image Source="noitechuvosa.jpg"
        Grid.ColumnSpan="3"
        Grid.RowSpan="5"
        Aspect="AspectFill"/>
@@ -29,26 +30,163 @@
         Grid.RowSpan="2"
         Grid.Column="0"
         BackgroundColor="#55FFFFFF">
+<Grid>
+<Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Label Text="25ºC"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="0"
+       FontSize="30"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+<Label Text="Apucarana, PR"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+</Grid>
 </Frame>
 
 <Frame  Grid.Row="1"
         Grid.Column="1"
         BackgroundColor="#55FFFFFF">
+<Grid>
+<Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+<Label Text="Chuva:"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+<Label Text="Humidade:"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+</Grid>
 </Frame>
 
 <Frame  Grid.Row="1"
         Grid.Column="2"
+        Padding="5"
         BackgroundColor="#55FFFFFF">
+<Grid>
+<Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+<Label Text="Amanhecer:"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+<Label Text="Anoitecer:"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+</Grid>
 </Frame>
 
 <Frame  Grid.Row="2"
         Grid.Column="1"
         BackgroundColor="#55FFFFFF">
+<Grid>
+<Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+
+<Label Text="Força:"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Start"/>
+
+<Label Text="Direção:"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Start"/>
+
+</Grid>
 </Frame>
 
 <Frame  Grid.Row="2"
         Grid.Column="2"
         BackgroundColor="#55FFFFFF">
+<Grid>
+<Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+<Label Text="Fase da lua:"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Start"/>
+
+</Grid>
 </Frame>
 
 <Frame  Grid.Row="4"
