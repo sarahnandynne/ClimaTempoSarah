@@ -36,7 +36,7 @@
         <RowDefinition Height="*"/>
 </Grid.RowDefinitions>
 
-<Label Text="25ºC"
+<Label x:Name="LabelTemperatura"
        TextColor="White"
        Grid.Row="0"
        Grid.Column="0"
@@ -59,10 +59,11 @@
 
 <Frame  Grid.Row="1"
         Grid.Column="1"
+        Padding="0"
         BackgroundColor="#55FFFFFF">
 <Grid>
 <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
+          <RowDefinition Height="70"/>
           <RowDefinition Height="*"/>
 </Grid.RowDefinitions>
 
@@ -71,7 +72,7 @@
           <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions>
 
-<Label Text="Chuva:"
+<Label Text="Chuva"
        TextColor="White"
        Grid.Row="0"
        Grid.Column="0"
@@ -80,10 +81,28 @@
        HorizontalTextAlignment="Center"
        VerticalOptions="Center"/>
 
-<Label Text="Humidade:"
+<Label Text="Umidade"
        TextColor="White"
        Grid.Row="1"
        Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+<Label x:Name="LabelChuva"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="1"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+<Label x:Name="LabelUmidade"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="1"
        FontSize="10"
        HorizontalOptions="Fill"
        HorizontalTextAlignment="Center"
@@ -98,7 +117,7 @@
         BackgroundColor="#55FFFFFF">
 <Grid>
 <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
+          <RowDefinition Height="70"/>
           <RowDefinition Height="*"/>
 </Grid.RowDefinitions>
 
@@ -107,7 +126,7 @@
           <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions>
 
-<Label Text="Amanhecer:"
+<Label Text="Amanhecer"
        TextColor="White"
        Grid.Row="0"
        Grid.Column="0"
@@ -116,7 +135,7 @@
        HorizontalTextAlignment="Center"
        VerticalOptions="Center"/>
 
-<Label Text="Anoitecer:"
+<Label Text="Anoitecer"
        TextColor="White"
        Grid.Row="1"
        Grid.Column="0"
@@ -125,25 +144,45 @@
        HorizontalTextAlignment="Center"
        VerticalOptions="Center"/>
 
+<Label x:Name="LabelAmanhecer"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="1"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+<Label x:Name="LabelAnoitecer"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="1"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Center"/>
+
+
 </Grid>
 </Frame>
 
 <Frame  Grid.Row="2"
         Grid.Column="1"
+        Padding="0"
         BackgroundColor="#55FFFFFF">
 <Grid>
 <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
+          <RowDefinition Height="70"/>
           <RowDefinition Height="*"/>
 </Grid.RowDefinitions>
 
 <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width=""/>
           <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions>
 
 
-<Label Text="Força:"
+<Label Text="Força"
        TextColor="White"
        Grid.Row="0"
        Grid.Column="0"
@@ -152,10 +191,28 @@
        HorizontalTextAlignment="Center"
        VerticalOptions="Start"/>
 
-<Label Text="Direção:"
+<Label Text="Direção"
        TextColor="White"
        Grid.Row="1"
        Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Start"/>
+
+<Label x:Name="LabelForça"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="1"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Start"/>
+
+<Label x:Name="LabelDireção"
+       TextColor="White"
+       Grid.Row="1"
+       Grid.Column="1"
        FontSize="10"
        HorizontalOptions="Fill"
        HorizontalTextAlignment="Center"
@@ -166,21 +223,31 @@
 
 <Frame  Grid.Row="2"
         Grid.Column="2"
+        Padding="0"
         BackgroundColor="#55FFFFFF">
 <Grid>
 <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
+          <RowDefinition Height="70"/>
 </Grid.RowDefinitions>
 
 <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width=""/>
           <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions>
 
-<Label Text="Fase da lua:"
+<Label Text="FaseDaLua"
        TextColor="White"
        Grid.Row="0"
        Grid.Column="0"
+       FontSize="10"
+       HorizontalOptions="Fill"
+       HorizontalTextAlignment="Center"
+       VerticalOptions="Start"/>
+
+<Label x:Name="LabelFaseDaLua"
+       TextColor="White"
+       Grid.Row="0"
+       Grid.Column="1"
        FontSize="10"
        HorizontalOptions="Fill"
        HorizontalTextAlignment="Center"

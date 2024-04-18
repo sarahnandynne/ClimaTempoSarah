@@ -4,7 +4,7 @@ namespace ClimaTempoSarah;
 
 public class Results
 {
-    public int tempo {get; set;}
+    public int temp {get; set;}
     public string description {get; set;}
     public string condition_code {get; set;}
     public string img_id {get; set;}
