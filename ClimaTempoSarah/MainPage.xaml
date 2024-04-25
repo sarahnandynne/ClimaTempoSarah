@@ -4,8 +4,8 @@
              x:Class="ClimaTempoSarah.MainPage"
              Shell.NavBarIsVisible="false">
 
-<Grid ColumnSpacing="10"
-      RowSpacing="10">
+<Grid ColumnSpacing="2"
+      RowSpacing="5">
 
 <Grid.RowDefinitions>
           <RowDefinition Height="*"/>

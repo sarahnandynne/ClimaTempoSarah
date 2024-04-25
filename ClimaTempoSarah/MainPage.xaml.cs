@@ -1,34 +1,59 @@
-﻿namespace ClimaTempoSarah;
+﻿using System.Text.Json;
+
+
+namespace ClimaTempoSarah;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-	Results results = new Results();
+	
+
+	 const string Url="https://api.hgbrasil.com/weather?woeid=455927&key=99374e61";
+	Resposta resposta;
 
 	public MainPage()
 	{
 		InitializeComponent();
-		TestaLayout();
-		PreencherTela();
+		AtualizaTempo();
 	}
+	
+
+	async void AtualizaTempo()
+	{
+		try
+		{
+			var httpClient = new HttpClient();
+			var response = await httpClient.GetAsync(Url);
+			if (response.IsSuccessStatusCode)
+			{
+				var content = await response.Content.ReadAsStringAsync();
+				resposta = JsonSerializer.Deserialize<Resposta>(content);
+			}
+	PreencherTela();
+		}
+		catch (Exception e)
+		{
+			//erro
+		}
+	}
+
 	void PreencherTela()
 	{
-		LabelTemperatura.Text=results.temp.ToString();
-		LabelChuva.Text=results.rain.ToString();
-		LabelUmidade.Text=results.humidity.ToString();
-		LabelAmanhecer.Text=results.sunrise;
-		LabelAnoitecer.Text=results.sunset;
-		LabelForça.Text=results.wind_speedy;
-		LabelDireção.Text=results.wind_direction.ToString();
-		LabelFaseDaLua.Text=results.moon_phase;
-		LabelDescrição.Text=results.description;
-		LabelCidade.Text=results.city;
+		LabelTemperatura.Text=resposta.results.temp.ToString();
+		LabelChuva.Text=resposta.results.rain.ToString();
+		LabelUmidade.Text=resposta.results.humidity.ToString();
+		LabelAmanhecer.Text=resposta.results.sunrise;
+		LabelAnoitecer.Text=resposta.results.sunset;
+		LabelForça.Text=resposta.results.wind_speedy;
+		LabelDireção.Text=resposta.results.wind_direction.ToString();
+		LabelFaseDaLua.Text=resposta.results.moon_phase;
+		LabelDescrição.Text=resposta.results.description;
+		LabelCidade.Text=resposta.results.city;
 
-		if (results.currently=="dia")
+		if (resposta.results.currently=="dia")
 		{
-			if (results.rain>=2)
+			if (resposta.results.rain>=2)
 			ImagemDeFundo.Source="diachuvoso.jpg";
-			else if (results.cloudiness>=1)
+			else if (resposta.results.cloudiness>=1)
 			ImagemDeFundo.Source="dianublado.jpg";
 			else
 			ImagemDeFundo.Source="diaensolarado.jpg";
@@ -36,32 +61,13 @@ public partial class MainPage : ContentPage
 		}
 		else
 		{
-			if (results.rain>=5)
+			if (resposta.results.rain>=5)
 			ImagemDeFundo.Source="noitechuvosa.jpg";
-			else if (results.cloudiness>=7)
+			else if (resposta.results.cloudiness>=7)
 			ImagemDeFundo.Source="noitenublada.jpg";
 			else
 			ImagemDeFundo.Source="noitelimpa.jpg";
 		}
-	}
-
-	void TestaLayout()
-	{
-		results.temp=25;
-		results.description="Tempo Nublado";
-		results.condition_code="28";
-		results.img_id="28";
-		results.city="Apucarana,PR";
-		results.rain=5;
-		results.cloudiness=2;
-		results.humidity=90;
-		results.sunrise="06:15";
-		results.sunset="18:25";
-		results.wind_speedy="4,99 km/h";
-		results.wind_direction=40;
-		results.moon_phase="Crescente";
-		results.currently="noite";
-
 	}
 }
 
