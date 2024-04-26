@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.UI.Xaml.Automation.Peers;
 
 
 namespace ClimaTempoSarah;
@@ -68,6 +69,8 @@ public partial class MainPage : ContentPage
 			else
 			ImagemDeFundo.Source="noitelimpa.jpg";
 		}
+
+		Forecast.ItemsSource = resposta.results.forecast
 	}
 }
 

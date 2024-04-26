@@ -280,6 +280,33 @@
          Margin="10,0"
         Grid.ColumnSpan="3"
         BackgroundColor="#55FFFFFF">
+
+<CollectionView x:Name="listaForecast">
+<CollectionView.ItemsLayout>
+<LinearItemsLayout Orientation="Horizontal"
+                   ItemSpacing="10"/>
+</CollectionView.ItemsLayout>
+<CollectionView.ItemTemplate>
+<DataTemplate>
+<Frame BackgroundColor="#FFF"
+       BorderColor="FFF"
+       WidhtRequest="200"
+       CornerRadius="20">
+
+<Grid>
+<Grid.RowDefinitions>
+       <RowDefinition Height="15"/>
+       <RowDefinition Height="20"/>
+       <RowDefinition Height="15"/>
+       <RowDefinition Height="15"/>
+       <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+       <ColumnDefinition Widht="*"/>
+       <ColumnDefinition Widht="*"/>
+</Grid.ColumnDefinitions>
+
+ 
 </Frame>
 
 </Grid>

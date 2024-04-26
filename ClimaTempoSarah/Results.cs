@@ -19,5 +19,6 @@ public class Results
     public string wind_cardinal {get;set;} //fiz
     public string moon_phase {get; set;} //fiz...
     public string currently {get; set;} //não precisa
+    public List<Forecast> forecast {get; set;}
     
 }
