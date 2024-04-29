@@ -122,7 +122,7 @@
 <Frame  Grid.Row="1"
         Grid.Column="2"
         Padding="5"
-         Margin="10,0"
+        Margin="10,0"
         BackgroundColor="#55FFFFFF">
 <Grid>
 <Grid.RowDefinitions>
@@ -289,9 +289,58 @@
 <CollectionView.ItemTemplate>
 <DataTemplate>
 <Frame BackgroundColor="#FFF"
-       BorderColor="FFF"
-       WidhtRequest="200"
+       BorderColor="#FFF"
+       WidthRequest="200"
        CornerRadius="20">
+
+<Label Text="{Binding date}"
+       FontSize="12"
+       TextColor="#000"
+       HorizontalOptions="Center"
+       Grid.Row="0"
+       Grid.ColumnSpan="2"/>
+
+<Label Text="{Binding weekday}"
+       FontSize="16"
+       TextColor="#000"
+       HorizontalOptions="Center"
+       Grid.Row="1"
+       Grid.ColumnSpan="2"/>
+
+<Label Text="Min:"
+       FontSize="12"
+       TextColor="#000"
+       HorizontalOptions="Center"
+       Grid.Row="2"
+       Grid.ColumnSpan="0"/>
+
+<Label Text="Max:"
+       FontSize="12"
+       TextColor="#000"
+       HorizontalOptions="Center"
+       Grid.Row="3"
+       Grid.ColumnSpan="0"/>
+
+<Label Text="{Binding min, StringFormat='{0}°C'}" 
+       FontSize="14"
+       TextColor="#000"
+       HorizontalOptions="Center"
+       Grid.Row="2"
+       Grid.ColumnSpan="1"/>
+
+<Label Text="{Binding max, StringFormat='{0}°C'}"
+       FontSize="14"
+       TextColor="#000"
+       HorizontalOptions="Center"
+       Grid.Row="3"
+       Grid.ColumnSpan="1"/>
+
+<Label Text="{Binding condition}"
+       Aspect="Fill"
+       HeightRequest="50"
+       WidthRequest="50"
+       Grid.Row="3"
+       Grid.ColumnSpan="1"/>
 
 <Grid>
 <Grid.RowDefinitions>
@@ -305,9 +354,11 @@
        <ColumnDefinition Widht="*"/>
        <ColumnDefinition Widht="*"/>
 </Grid.ColumnDefinitions>
-
- 
+</Grid>
 </Frame>
-
+</DataTemplate>
+</CollectionView.ItemTemplate>
+</CollectionView>
+</Frame>
 </Grid>
 </ContentPage>

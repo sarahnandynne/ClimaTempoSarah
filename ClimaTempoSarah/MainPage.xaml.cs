@@ -70,7 +70,7 @@ public partial class MainPage : ContentPage
 			ImagemDeFundo.Source="noitelimpa.jpg";
 		}
 
-		Forecast.ItemsSource = resposta.results.forecast
+		listaForecast.ItemsSource = resposta.results.forecast;
 	}
 }
 
