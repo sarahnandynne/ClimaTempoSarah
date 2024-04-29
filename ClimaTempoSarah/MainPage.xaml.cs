@@ -50,6 +50,15 @@ public partial class MainPage : ContentPage
 		LabelDescrição.Text=resposta.results.description;
 		LabelCidade.Text=resposta.results.city;
 
+		if (resposta.results.moon_phase=="full")
+		LabelFaseDaLua.Text = "Cheia";
+		else if (resposta.results.moon_phase=="new")
+		LabelFaseDaLua.Text = "Nova";
+		else if (resposta.results.moon_phase=="growing")
+		LabelFaseDaLua.Text = "Crescente";
+		else if (resposta.results.moon_phase=="waning_gibbous")
+		LabelFaseDaLua.Text = "Minguante";
+
 		if (resposta.results.currently=="dia")
 		{
 			if (resposta.results.rain>=2)
