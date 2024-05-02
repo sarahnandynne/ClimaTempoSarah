@@ -29,7 +29,7 @@ public partial class MainPage : ContentPage
 				var content = await response.Content.ReadAsStringAsync();
 				resposta = JsonSerializer.Deserialize<Resposta>(content);
 			}
-	PreencherTela();
+			PreencherTela();
 		}
 		catch (Exception e)
 		{
@@ -51,32 +51,32 @@ public partial class MainPage : ContentPage
 		LabelCidade.Text=resposta.results.city;
 
 		if (resposta.results.moon_phase=="full")
-		LabelFaseDaLua.Text = "Cheia";
+			LabelFaseDaLua.Text = "Cheia";
 		else if (resposta.results.moon_phase=="new")
-		LabelFaseDaLua.Text = "Nova";
+			LabelFaseDaLua.Text = "Nova";
 		else if (resposta.results.moon_phase=="growing")
-		LabelFaseDaLua.Text = "Crescente";
+			LabelFaseDaLua.Text = "Crescente";
 		else if (resposta.results.moon_phase=="waning_gibbous")
-		LabelFaseDaLua.Text = "Minguante";
+			LabelFaseDaLua.Text = "Minguante";
 
 		if (resposta.results.currently=="dia")
 		{
 			if (resposta.results.rain>=2)
-			ImagemDeFundo.Source="diachuvoso.jpg";
+				ImagemDeFundo.Source="diachuvoso.jpg";
 			else if (resposta.results.cloudiness>=1)
-			ImagemDeFundo.Source="dianublado.jpg";
+				ImagemDeFundo.Source="dianublado.jpg";
 			else
-			ImagemDeFundo.Source="diaensolarado.jpg";
+				ImagemDeFundo.Source="diaensolarado.jpg";
 
 		}
 		else
 		{
 			if (resposta.results.rain>=5)
-			ImagemDeFundo.Source="noitechuvosa.jpg";
+				ImagemDeFundo.Source="noitechuvosa.jpg";
 			else if (resposta.results.cloudiness>=7)
-			ImagemDeFundo.Source="noitenublada.jpg";
+				ImagemDeFundo.Source="noitenublada.jpg";
 			else
-			ImagemDeFundo.Source="noitelimpa.jpg";
+				ImagemDeFundo.Source="noitelimpa.jpg";
 		}
 
 		listaForecast.ItemsSource = resposta.results.forecast;
